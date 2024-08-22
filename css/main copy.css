@@ -1,0 +1,95 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.banner-section {
+    background-color: navy;
+    color: white;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+}
+  
+.banner-text {
+    margin: 0 auto;
+    max-width: 800px; /* Ensures the text doesn't span too wide on larger screens */
+    padding: 15px;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 16px; /* Smaller text on small devices */
+    }
+}
+
+
+.card {
+    height: 200px; /* Adjust the height as needed */
+    border-radius: 30px;
+    border: solid;
+    border-color: #001440d7;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+  
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.card-button {
+    margin-top: auto; /* This pushes the button to the bottom */
+  
+    /*
+    remove any width settings that are based on percentages, 
+    which cause the button to resize relative to its container.
+    */
+    /* width: 40%;*/
+
+    /* Fixed minimum width 
+        If you want the button to be responsive 
+        while maintaining its proportions, consider using min-width instead.
+    */
+    min-width: 120px;
+    margin-left: auto;  /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+    border-radius: 10px;
+    color: #fff;
+    background-color: navy;
+
+    /*set the color you want here*/
+    /*
+    border-color: gray; 
+    border-width: 3px;
+    border-style: solid;
+    */
+
+}
+
+/*
+.card-button:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #001440d7;
+*/
+     /*set the color you want here*/
+/*
+    border-color: #285e8e;
+    border-width: 3px;
+    border-style: solid;
+}
+*/
+
+
+
+

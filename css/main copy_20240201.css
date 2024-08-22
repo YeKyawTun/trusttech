@@ -1,0 +1,119 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.banner-section {
+    
+    color: white;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* to debug box-shadow: 0 4px 12px -2px rgba(214, 9, 9, 0.3); */    
+}
+
+
+.banner-image {
+    width: 100%;
+
+}
+  
+
+.banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    max-width: 80%;
+}
+
+.banner-text h1 {
+    margin-bottom: 30px;
+}
+
+
+.banner-text p {
+    color: rgb(173, 148, 231);
+}
+
+
+
+.card {
+    height: 200px; /* Adjust the height as needed */
+    border-radius: 30px;
+    border: solid;
+    border-color: #001440d7;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+  
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.large-icon {
+    font-size: 36px;
+}
+
+.card-icon {
+    margin-bottom: 20px;
+}
+  
+.card-button {
+    margin-top: auto; /* This pushes the button to the bottom */
+  
+    /*
+    remove any width settings that are based on percentages, 
+    which cause the button to resize relative to its container.
+    */
+    /* width: 40%;*/
+
+    /* Fixed minimum width 
+        If you want the button to be responsive 
+        while maintaining its proportions, consider using min-width instead.
+    */
+    min-width: 120px;
+    margin-left: auto;  /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+    border-radius: 10px;
+    color: #fff;
+    background-color: navy;
+
+
+
+}
+
+
+/* Responsive text size */
+@media (max-width: 768px) {
+
+    .banner-section {
+        height: 200px; /* Same as the height of the cards */
+    }
+    
+    .banner-image {
+        width: 100%;
+        height: 200px; /* Same as the height of the banner section */
+    }
+
+    .banner-text {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        padding: 20px;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        max-width: 80%;
+    }
+}
+
+
+
+
+
