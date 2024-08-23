@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Append Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Main CSS File -->
+<style>
+    /*--------------------------------------------------------------
+    # Hero Section
+    --------------------------------------------------------------*/
+
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  /* padding: 80px 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(23, 23, 216, 0.966);
+}
+
+
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 5px 0 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+</style>
+
+</head>
+
+<body class="index-page">
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <!-- <img src="assets/img/hero-bg.jpg" alt=""> -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <h2>Welcome to Our Website</h2>
+            <p>We are team of talented designers making websites with Bootstrap</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <section id="test">
+        <div class="container">
+            <p>Testing 1 2 3</p>
+        </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+</body>
+
+</html>
