@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- v1.9 
+    <meta http-equiv="Content-Security-Policy" 
+    content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    style-src 'self' https://cdn.jsdelivr.net;
+    img-src 'self' data:;
+    connect-src 'self';
+    frame-src 'none';
+    object-src 'none';
+    base-uri 'self';
+    "
+    > -->
+
+    <meta name="referrer" content="no-referrer"> <!-- v1.9 -->
+
+    <title>Home</title>
+
+    
+    <!-- v1.9 - https://www.srihash.org/ - generate integrity from there -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" integrity="sha384-c9MVH4yRDZMY+bSlECVISp9U4xBl1dKb5z4x8IgF6lBKTHsh1AtxHBfHiiA+S/Nr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.27.1/dist/apexcharts.css" integrity="sha384-KKz9zieFddZpC3oGN6Zo6m75rSd/iO0VCeCcB5v4IM/dJvrDY4fN4FrE7O8YKqWa" crossorigin="anonymous">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+          font-family: 'Rubik', sans-serif;
+          /* display: flex; */
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+
+
+          /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 20 20" fill="grey"><circle cx="1" cy="1" r="1"/></svg>');
+          background-size: 10px 10px; */
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .banner-section {
+    
+          color: white;
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          /* to debug box-shadow: 0 4px 12px -2px rgba(214, 9, 9, 0.3); */    
+          margin-bottom: 20px;
+
+          background-image: url('c_assets/photos/BANNER_BOK_1.png');
+          background-size: cover; /* Cover the entire container */
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat; /* Do not repeat the image */
+
+          padding-top: 50px;
+          height: 50vh;
+
+        }
+
+
+        .banner-image {
+          width: 100%;
+          height: auto; /* Maintain aspect ratio */
+          object-fit: cover; /* Cover the container while preserving aspect ratio */
+          display: block; /* Remove any extra space below the image */
+
+        }
+
+
+        .banner-text {
+          position: absolute;
+          color: rgb(255, 255, 255);
+          font-size: 20px;
+          padding: 20px;
+          /* background-color: rgba(0, 0, 0, 0.5); */
+          max-width: 50%;
+        }
+
+        .banner-text h1 {
+          margin-bottom: 30px;
+          font-weight: bold;
+          font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically adjusts font size */
+          overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
+        }
+
+
+        .banner-text p {
+          font-size: clamp(0.5rem, 1.5vw, 1.3rem);;
+        }
+
+
+        /* Media Queries */
+        @media (min-width: 1025px) and (max-width: 5500px) {
+
+        .banner-section {
+          height: 30vh; /* Same as the height of the cards */
+          margin-bottom: 0px;
+          
+        }
+
+        .banner-image {
+          width: 100%;
+          height: 30vh; /* Same as the height of the banner section */
+        }
+
+        .banner-text {
+          position: absolute;
+          color: rgb(255, 255, 255);
+          font-size: 20px;
+          padding: 20px;
+          /* background-color: rgba(0, 0, 0, 0.5); */
+          max-width: 70%;
+        }
+
+        }
+
+        @media (min-width: 481px) and (max-width: 1024px) {
+        .banner-section {
+          height: 30vh; /* Same as the height of the cards */
+          margin-bottom: 10px;
+          
+        }
+
+        .banner-image {
+          width: 100%;
+          height: 30vh; /* Same as the height of the banner section */
+        }
+
+        .banner-text {
+          position: absolute;
+          color: rgb(255, 255, 255);
+          font-size: 15px;
+          padding: 20px;
+          /* background-color: rgba(0, 0, 0, 0.5); */
+          max-width: 80%;
+        }
+
+
+        }
+
+
+        @media (max-width: 480px) {
+        .banner-section {
+          height: 30vh; /* Same as the height of the cards */
+          margin-bottom: 10px;
+          
+        }
+
+        .banner-image {
+          width: 100%;
+          height: 30vh; /* Same as the height of the banner section */
+        }
+
+        .banner-text {
+          position: absolute;
+          color: rgb(255, 255, 255);
+          font-size: 12px;
+          padding: 20px;
+          /* background-color: rgba(0, 0, 0, 0.5); */
+          max-width: 80%;
+        }
+
+
+        }
+
+        .container-fluid {
+            padding-right: 10%; /* Adjusts padding to push content from the right */
+        }
+
+        .navbar-brand {
+            margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
+            color: #F8F8FF !important; 
+        }
+
+        .navbar {
+            background-color: #161A30;
+        }
+
+        .navbar-nav .nav-link {
+            color: #F8F8FF !important; /* Pure white */
+            cursor: default;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff !important; /* Bootstrap's default blue */
+        }
+
+        .navbar .dropdown-menu .dropdown-item {
+            cursor: default; /* Changes the cursor to the default arrow pointer */
+        }
+
+
+        .navbar .dropdown-menu .dropdown-item:hover {
+            color: #007bff !important; /* Bootstrap's default blue */
+        }
+
+        .hero {
+            width: 100%;
+            min-height: 100vh;
+            /*padding: 80px 0;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Added position relative here */
+        }
+
+        .hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1; /* Ensure this is the lowest layer */
+        }
+
+        .hero:before {
+            content: "";
+            background: rgba(0, 0, 0, 0.5); /* Simplified the background mix */
+            position: absolute;
+            inset: 0;
+            /*z-index: 2;*/ /* This makes it appear on top of the image */
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 44px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero p {
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+            margin: 5px 0 0 0;
+            font-size: 20px;
+            color: white;
+        }
+
+        .hero .join-us-btn {
+            margin-top: 5px; /* Adds a top margin of 5px */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .hero .join-us-btn:hover {
+            background-color: navy; /* Change the background color on hover */
+            color: #fff; /* Change the text color on hover */
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .hero img {
+                max-width: 100%;
+                width: auto;
+                height: auto; /* Allows the image to maintain aspect ratio */
+                min-height: 100%; /* Ensures the image covers the viewport height */
+                object-position: center; /* Adjust this if needed to focus on a particular part of the image */
+            }
+        }
+
+        /*--------------------------------------------------------------
+        # About Us
+        --------------------------------------------------------------*/
+        .about-us {
+            /*margin-top: 50px;*/  /* Adjust this value to your preference */
+            background-color: #f8f7f5;
+            padding: 20px; /* Adds padding for better text readability */
+            border-radius: 8px; /* Optional: adds rounded corners */
+            text-align: justify;
+        }
+
+        .about-us h2 {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .about-us h3 {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .about-us  ul {
+            padding-left: 5em; /* Adds space to the left of ordered list items */
+        }
+
+
+        .responsive-img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .responsive-img2 {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .responsive-img3 {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .accordion-flush {
+            margin-bottom: 20px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Menu Items -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+    
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="reference_library.html">Reference Library</a>
+                    </li>
+                    -->
+    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Digital Directory
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="search_people.html">Search</a></li>
+                      </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Join us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactform.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    
+      <main>
+        <!-- Banner Section -->
+        <div class="banner-section">
+                
+            <div class="banner-text">
+                <h1>BODY OF KNOWLEDGE</h1>
+                <p>Reference Library - AI Safety</p>
+            </div>
+        </div>
+    
+    
+    
+            <!-- About Section -->
+            <section id="about" class="about-us">
+              <div class="container">
+
+                <h2>SG Model AI Governance Framework for Traditional AI</h2>
+
+                <h3>Introduction</h3>
+                <p>
+                  The Model Framework (2nd Edition) was released at the 2020 World Economic Forum Annual Meeting in Davos, Switzerland. The Model Framework mainly emphasizes on four key areas such as internal governance structures and measures, human involvement in AI-augmented decision-making, operations management, and stakeholder interaction and communication. The Model Framework aims to be comprehensive, but it is constrained by its form, purpose, and practical limitations of scope. Therefore, it's important to acknowledge certain limitations or conditions when considering its application. The Model Framework is algorithm-agnostic, technology-agnostic, sector-agnostic, and scale-and-business-model-agnostic.
+                </p>
+
+                <p>
+                  The objectives of the Model Framework are as follows: 
+                  <ul>
+                      <li>
+                          To address challenges introduced by AI such as ethical, legal, governance, discrimination, fairness, transparency.
+                      </li>
+                      <li>
+                          To proposes this second edition of voluntary Model Framework as general, ready-to-use tool to enable organizations deploying AI solutions at scale to carry out in a responsible manner.
+                      </li>
+                      <li>
+                          To provide guidance on critical issues and measures. Assist organisations to achieve the following objectives 
+                          <span style="color: red;">i)</span> build stakeholder confidence in AI via organization's responsible use of AI 
+                          <span style="color: red;">ii)</span> align internal policies, structures and processes with relevant accountability-based practices in data management and protection such as PDPA and OECD Privacy Principles.
+                      </li>
+                      <li>
+                          To provide ISAGO which assist organisations access the alignment of their AI governance practices and processes with the Model Framework.
+                      </li>
+                      <li>
+                          To offer consideration and recommendations to guide organizations that have decided to deploy AI technologies at scale.
+                      </li>
+                  </ul>
+                </p>
+                
+                <p>
+                      The Model Framework is founded on two key guiding principles that foster trust in AI and enhance understanding of AI technologies. 
+                      <ul>
+                          <li>
+                              <b>Explainable, Transparent, and Fair:</b> Organisations using AI in decision-making should ensure that the decision-making process is explainable, transparent and fair. If perfect explainability, transparency and fairness are unattainable, then organisations should try to affirm that their use or application of AI is undertaken in a responsible manner.
+                          </li>
+                          <li>
+                              <b>Human-centric AI Solutions:</b> When utilizing AI to enhance human abilities, prioritizing the protection of human interests such as their well-being and safety, should be the foremost concern during the design, development and deployment of AI.
+                          </li>
+                      </ul>
+                </p>
+
+                <p>
+                      The Model Framework is designed to help organisations by integrating ethical principles into familiar and pre-existing corporate governance structures, and support by providing guidelines for the adoption of AI in an organisation. 
+                </p>
+
+
+
+
+                <h3>Model AI Governance Framework - Guidance on measures</h3>
+
+                <p>
+                  This Model Framework offers guidance on measures that organisations should adopt in critical areas to encourage the responsible use of AI such as <span style="color: red;">i)</span> Internal governance structures and measures, <span style="color: red;">ii)</span> Determining the level of human involvement in AI-augmented decision-making, <span style="color: red;">iii)</span> Operations management, and <span style="color: red;">iv)</span> Stakeholder interaction and communication.
+                  The Model Framework is designed to be flexible, allowing organisations to tailor it to their specific needs by implementing the elements that are most relevant to them.
+                  In this Model Framework, uses cases released by PDPC are also included in order to demonstrate how organisations have implemented AI governance practices which are aligned to all sections of the Model Framework.                    
+                </p>
+
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Internal governance structures and measures
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                            <h5><b>Internal governance structures and measures</b></h5>
+                            <p>
+                              The model framework recommends features which are essential for the development of organisational internal governance structure such as
+                              <ul>
+                                  <li>
+                                      defining clear roles and responsibilities for the ethical deployment of AI
+                                  </li>
+                                  <li>
+                                      implementing risk management and internal controls.
+                                  </li>
+                              </ul>      
+                          </p>
+          
+                          <p>
+                              For defining clear roles and responsibilities for ethical deployment of AI, there are many factors to be considered.
+                              Firstly, proper allocation to the appropriate personnel or department, as well as forming a coordinating body, is extremely important. 
+                              Secondly, assigned personnel and/or departments should be fully aware of their roles and responsibilities, be properly trained and equipped with necessary resources and guidance. 
+                              Finally, it suggests roles and responsibilities that can be assigned include 
+                              <span style="color: red;">i)</span> using current risk management framework and applying risk control measure in order to evaluate and handle the risks of deploying AI, determine the adequate level of human involvement, manage the AI model training and selection process, 
+                              <span style="color: red;">ii)</span> maintaining, monitoring, documenting, and reviewing the deployed AI models, 
+                              <span style="color: red;">iii)</span> assessing communication methods and stakeholder interactions, and 
+                              <span style="color: red;">iv)</span> providing appropriate training for all staff working with AI systems, with specialized training to handle AI models, and general awareness training for other employees to understand AI's benefits, risks, and limitations.
+                          </p>
+          
+                          <p>
+                              For implementing risk management and internal controls, organisations are advised to implement a robust risk management system and internal controls which handle the risks related to the deployment of selected AI Model. The measures suggested by the Model Framework include 
+                              <span style="color: red;">i)</span> putting sufficient efforts to verify that datasets utilized for AI model training are suitable for their intended purpose, and to evaluate and manage the risks of inaccuracies or biases, as well as to review exceptions that arise during the model training process, 
+                              <span style="color: red;">ii)</span> creating systems of monitoring, autonomous monitoring, and reporting, along with processes to ensure that the relevant management level is informed about the performance and any issues associated with the deployed AI, 
+                              <span style="color: red;">iii)</span> making sure that knowledge transfer during key personnel changes in AI activities helps prevent gaps in internal governance caused by staff movement, 
+                              <span style="color: red;">iv)</span> assessing the internal governance structure and measures whenever there are major changes in the organisational structure or key personnel, and 
+                              <span style="color: red;">v)</span> regularly evaluating the internal governance structure and measures to maintain their relevance and effectiveness.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Determining the level of human involvement in AI-augmented decision-making
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            
+                            <h5><b>Determining The Level of Human Involvement in AI-Augmented Decision-Making</b></h5>
+
+                            <p>
+                                This section is designed to assist organisations in determining the appropriate level of human oversight in AI-augmented decision-making. 
+                                The important factors that organisations should consider are 
+                                <span style="color: red;">i)</span> Organisations should begin by clearly defining their objectives for implementing AI such as ensuring consistency in decision-making, boosting operational efficiency and reducing costs, or adding new product features. These objectives should be carefully weighed against potential risks in organisation's decision-making, 
+                                <span style="color: red;">ii)</span> It is advisable for organisations operating across multiple countries to evaluate variations in societal norms, values and/or expectations, 
+                                <span style="color: red;">iii)</span> Organisations should cautiously assess the risks for both individuals and groups because certain risks might not be evident when looking at individual cases but can become apparent when considering a group as a whole, 
+                                <span style="color: red;">iv)</span> Organisations should ideally align their assessment of commercial goals against the risks of AI usage with their core corporate values, and 
+                                <span style="color: red;">v)</span> Organisations should constantly identify and review risks related to their technology solutions, mitigate those risks, and maintain a response plan. The periodic review for risk impact assessment helps organisations build clarity and confidence in utilizing the AI solutions.
+                            </p>
+            
+                            <p>
+                                What are the three board approaches of human involvement in AI-Augmented decision-making?
+                                The Model Framework designs 3 approaches  to categorize different degrees of human oversight in the decision-making process such as human-in-the-loop, human-out-of-the-loop, and human-over-the-loop.
+                                <ul>
+                                    <li>
+                                        The term "Human-in-the-loop" refers to a system where humans maintain full control, with AI only offering recommendations. Decisions require active human approval, meaning the AI cannot act independently without human intervention.
+                                    </li>
+                                    <li>
+                                        The term "Human-out-of-the-loop" refers to a system where AI operates independently without any human oversight or the ability for humans to override its decisions.
+                                    </li>
+                                    <li>
+                                        The term "Human-over-the-loop" refers to a system where humans monitor and supervise AI operations, with the ability to intervene and take control if the AI encounters issues or undesirable outcomes. This approach allows humans to adjust parameters during the AI's operation.
+                                    </li>
+                                </ul>
+            
+                                <i>The Model Framework suggests a design framework to assist organisations for evaluating the level of human involvement in AI-augmented decision-making. 
+                                   <b>Organisations should not focus to apply the suggested design framework solely as there are numerous factors contributing to the level of human oversight in AI</b>.
+                                </i>
+            
+                            </p>
+            
+                            <p>
+                                The Model Framework also recommends a design framework (structured as a matrix). 
+                                This design framework is organized around two key factors: 
+                                the likelihood (probability) and the extent (severity) of harm that a decision made by an organization could cause to an individual or the organisation itself. These axes help assess and manage potential risks associated with decisions.
+                            </p>
+            
+                            <img src="c_assets/photos/home/probabilityOfHarm.JPG" alt="probability_of_harm" class="responsive-img">
+            
+                            <p>
+                                Based on sectors, the meaning of "harm" and the computation of probability (likelihood) and extent (severity) will vary. 
+                                Moreover, the matrix highlights that while the probability and severity of harm are key factors in determining human oversight in AI decision-making, they are not the only factors to consider. 
+                                Other factors that organisations may consider as follow: 
+                                <span style="color: red;">i)</span> the nature of harm, 
+                                <span style="color: red;">ii)</span> the reversibility of harm, 
+                                <span style="color: red;">iii)</span> whether it is operationally feasible of meaningful for a human to be involved in a decision-making process.
+                            </p>
+                            <p>
+                                For instance, in safety-critical system, organizations should ensure that a person can take control if needed. 
+                                The AI system should provide enough information for the person to make informed decisions or safely shut down the system if human control is not feasible.
+                                
+                            </p>
+
+                            
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Operations management
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+
+                            <h5><b>Operation Management</b></h5>
+                            <p>
+                                This section aims to guide organisations in implementing responsible practices during the operational phase of their AI adoption process. 
+                                Also, the closed interaction between data and algorithm/model is a primary consideration for this section.
+                            </p>
+                            <p>
+                                The generalized AI model development and deployment process, a continuous process of learning, is utilized in the Model Framework to express phases in implementing an AI solution. 
+                                The process mentioned above follows these steps such as data preparation, algorithms, and selected model. 
+                                In data preparation stage, the raw data is organized and cleaned to ensure accurate can be made. 
+                                In algorithm stage, the dataset is used to train model, and algorithms may be applied. 
+                                In selected model stage, the chosen model generates probability scores that can be incorporated into applications to provide predictions, make decisions, solve problems, and initiate actions.
+                            </p>
+            
+                            <img src="c_assets/photos/home/operationalManagement.JPG" alt="operational_management" class="responsive-img2">
+            
+                            <p>
+                                It is beneficial for relevant departments within the organization, responsible for data quality, model training, and model selection to collaborate in establishing strong data accountability practices to make sure the success of an AI solution. These include
+                                <ul>
+                                    <li>
+                                        Understanding the various kinds of data lineage
+                                        <p>
+                                            There are different data lineages such as Backward data lineage, forward data lineage, and end-to-end data lineage. 
+                                            The important thing which organisations should maintain is a data provenance record which enables organisation to identify the data quality based on its origin and  follow-up transformation, track potential error sources, update data and attribute to their origins.
+                                        </p>
+                                    </li>
+            
+                                    <li>
+                                        Ensuring Quality of Data
+                                        <p>
+                                            Organisations are encouraged to assess Quality of Data such as the dataset accuracy, dataset completeness, dataset credibility, the frequency of dataset's compilation or update, the relation between dataset and the context for data collection, the integrity of the dataset, the usability of the dataset, and human involvements.
+                                        </p>
+                                    </li>
+            
+                                    <li>
+                                        Minimising inherent bias
+                                        <p>
+                                            The Model Framework concentrates on inherent bias in datasets which may result in unintended outcomes such as undesired discriminatory decisions. 
+                                            The two kinds of bias which can be found frequently are selection bias and measurement bias. 
+                                            The selection bias arises when the data used to create the model does not fully reflect the real-world data or environment in which the model may receive or operate. 
+                                            The measurement bias occurs when data collection device systematically skews the data in a specific direction. 
+                                            The Model Framework suggests using a heterogenous dataset to reduce the inherent bias risks.
+                                        </p>
+                                    </li>
+            
+                                    <li>
+                                        Utilizing different datasets for training, testing and validation
+                                        <p>
+                                            The Model Framework suggests using different datasets for training, testing, and validation. 
+                                            The training data should be used for model training, the test data should be utilized for model accuracy. 
+                                            Lastly, the validation data should be applied for validating the trained model.
+                                        </p>
+                                    </li>
+            
+                                    <li>
+                                        Periodic reviewing and updating of datasets
+                                        <p>
+                                            The Moel Framework advises organisations to assess datasets (training, testing, validation datasets) regularly.
+                                        </p>
+                                    </li>
+                                </ul>
+            
+                            </p>
+            
+                            <p>
+                                Additionally, the Model Framework discusses measures associated with algorithms and model such as explainability, repeatability, robustness, regular tuning, reproducibility, traceability, and auditability.
+                            </p>
+
+                            
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Stakeholder interaction and communication
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                          <div class="accordion-body">
+
+                            <h5><b>Stakeholder Interaction and Communication</b></h5>
+                            <p>
+                                The purpose of this section is to assist organisations implement well-suited steps to establish confidence in the strategies of stakeholder relationship during the deployment of AI.
+                            </p>
+                            <ul>
+                                <li>
+                                    General disclosure
+                                    <p>
+                                        The Model Framework advised that organisations are recommended to present general information about the use of AI in their services and products. 
+                                        If possible, that information related to AI should include its purpose, application in consumer decision-making, benefits, reasons for adoption, risk mitigation efforts, and its role in the decision-making process.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                    Policy for explanation
+                                    <p>
+                                        Organisations are advised to establish a policy detailing what explanations to offer to individuals and when to deliver them. 
+                                        These policies maintain consistency in communication and clearly define the roles and responsibilities of various members within the organisation.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Bringing explainability and transparency together in a meaningful way
+                                    <p>
+                                        Organisations are suggested that effective communication fosters trust and confidence, strengthening relationships between organisations and individuals. 
+                                        Companies should regularly test, access and review their stakeholder relationship strategies to ensure effectiveness, adapting them to different situations as needed.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Interacting with consumers
+                                    <p>
+                                        Organisations are encouraged to consider deeply when dealing with consumers such as ensuring consumers are informed that products or services, they are considering are AI-enabled, informing consumers about how AI-enabled features are expected to function during regular use, and offering additional information to explain the AI-driven decision and providing a way for consumers to contest certain decisions.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Option to opt-out
+                                    <p>
+                                        Organizations should carefully assess whether to offer individuals the option to opt out of using an AI product or service, considering factors like the risk to individuals, reversibility of decisions, availability and cost of alternatives, system complexity, and technical feasibility.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Communication channels
+                                    <p>
+                                        The Model Framework advise organisations to establish communication channels for their consumers such as feedback channels and decision review channels. 
+                                        The feedback channels can be utilized for customers to provide feedback or ask questions. 
+                                        Those channels may be overseen by the organisation's Data Protection Officer (DPO) and Quality Service Manager (QSM). 
+                                        In addition to current review obligations, organisations might use the decision review channels to offer a way for individuals such as affected consumers, to request a review of significant AI decisions that have impacted them.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Testing the user interface
+                                    <p>
+                                        Organizations should test and resolve usability issues in user interfaces before deployment to ensure they function as intended. 
+                                        If relevant, they should also inform users that their responses may be used to train the AI system, such as in a chatbot.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Easy-to-understand communications
+                                    <p>
+                                        Organisations should communicate in an easy-to-understand manner to increase transparency. 
+                                        There are existing tools to measure readability such as the Fry readability graph, the Gunning Fog Index, the Flesch-Kincaid readability tests, etc
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Acceptable user policies
+                                    <p>
+                                        Organisations are encouraged to establish specific acceptable user policies (AUPs) to prevent users from intentionally inputting data that could improperly influence the model's performance or outcomes. 
+                                        AUPs should be defined for how individuals can interact with the AI system, including restrictions on action like reverse engineering, disabling, or disrupting the service's functionality and performance.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Interacting with other organisations
+                                    <p>
+                                        Organisations should implement clear approaches and strategies to get support from AI solution providers to supply the necessary information and build features that help the deploying organization align with the Model Framework. 
+                                        Organizations may need to gather detailed support and information from AI solution providers on various aspects, including data, model training and selection, human involvement, inferences, algorithmic presence, and measures and safeguards to mitigate biases in data and algorithms.
+                                    </p>
+                                </li>
+            
+                                <li>
+                                        Ethical evaluation
+                                    <p>
+                                        Organisations are advised to regularly assess and update their AI governance practices aligning with evolving ethical standards and share the results with relevant stakeholders.
+                                    </p>
+                                </li>
+            
+                            </ul>
+            
+                            <img src="c_assets/photos/home/stakeholderInteractionAndCommunication.png" alt="operational_management" class="responsive-img3">
+
+                          </div>
+                        </div>
+
+                        
+                    </div>
+
+                    
+
+                  </div>
+
+
+                  <h3>Model AI Governance Framework - Guidance on measures - Assumptions</h3>
+                  <p>
+                    There are assumptions made by the Model Framework such as 
+                    <ul>
+                        <li>
+                            The Model Framework intends to discuss good data management practices in general, especially for machine learning models rather than pure decision tree-driven AI models.
+                        </li>
+                        <li>
+                            The Model Framework does not tackle down the risk of catastrophic failure resulting from cyber-attacks on AI-dependent organisation.
+                        </li>
+                        <li>
+                            The Model Framework claim that although organisations decided to follow this framework, they are still required to comply with existing laws and regulations. Adopting the framework does not  exempt  them from t heir legal obligations.
+                        </li>
+                        <li>
+                            As the model framework is an accountability-based framework,  organizations can show that they have implemented responsible  practices in managing and protecting data. This can help them demonstrate compliance with standards like PDPA and OECD privacy principles, indicating that they are taking accountability seriously in their data-related activities.
+                        </li>
+                    </ul>
+                  </p>
+  
+                  <p>
+                    The AI adoption process discuss in this model framework does not distinguish  between business-to-consumer ("B2C"), business-to-business ("B2B"), and  business-to-business-to-consumer ("B2B2C") relationships.
+                  </p>
+
+
+                  <h3>Compiled list of AI Principles</h3>
+                  <i><p>
+                    The compilation list of AI ethical principles, collected from various sources and not all covered in the Model Framework, are 1) Accountability 2) Accuracy 3) Auditability 4) Explainability 5) Fairness 6) Human Centricity and Well-being 7) Human rights alignment 8 ) Inclusivity 9) Progressiveness 10) Responsibility, accountability and transparency 11) Robustness and Security and 12) Sustainability.
+                  </p></i>
+
+
+                  <h3>Source</h3>
+                  <b><i><p>Organisations are encouraged to read original edition for Compendium of Use cases. The original publication can be found <a href="https://www.pdpc.gov.sg/-/media/Files/PDPC/PDF-Files/Resource-for-Organisation/AI/SGModelAIGovFramework2.pdf" target="_blank" rel="noopener noreferrer">here</a>.</p></i></b>
+
+
+              </div>
+
+              
+    
+          </section>
+          <!-- /About Section -->
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
