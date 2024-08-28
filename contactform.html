@@ -1,169 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Grant Call</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
  
     <!-- ASO CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="c_assets/css/contactform.css">
+    <link href="c_assets/css/contactform.css" rel="stylesheet">
 
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                  <!-- Menu Items -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                  </li>
-  
-                  <li class="nav-item">
-                      <a class="nav-link" href="reference_library.html">Reference Library</a>
-                  </li>
-  
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Digital Directory
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="search_people.html">Search</a></li>
-                    </ul>
-                  </li>
-                  
-                  <li class="nav-item">
-                      <a class="nav-link" href="registration.html">Join us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/forum/" target="_blank">Forum</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contactform.html">Contact us</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </nav>
+    
+ 
 
 </head>
-
 <body>
 
-    <!-- Banner Section -->
-    <div class="banner-section">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Menu Items -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
     
-      <!-- <img src="c_assets/photos/BANNER_BOK_high_resolution.png" class="banner-image"> -->
-          
-      <div class="banner-text">
-          <h1>Body of Knowledge</h1>
-            <p>Contact Us</p>
-      </div>
-  </div>
-
-
-
-
-  <section id="contact" class="contact">
-    <div class="container">
-
-        
-        <!-- <div class="section-header">
-            <h2>Contact Us</h2>
-            <p>We value your input! Please leave us a message below, and we'll make every effort to respond within one business day.</p>
-        </div> 
-      -->
-        
-
-
-        <div class="row gx-lg-0 gy-4">
-            <div class="col-lg-4">
-                  <div class="info-container align-items-center justify-content-center">                 
-                      <div class="info-item d-flex">
-                        <i class="bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                          <h4>Email Us</h4>
-                          <p>Use the Contact Us form to email us. We will respond within 3 – 5 business days.</p>
-                        </div>
-                      </div><!-- End Info Item -->
-                </div> <!-- info-container -->
-            </div> <!-- col-lg-4 -->
-
-
-            <div class="col-lg-8">
-
-                <form action="c_assets/php/message.php" class="php-email-form" method="post">
-
-                  <!-- v1.8 CSRF Token -->
-                  <input type="hidden" name="csrf_token" id="csrf_token" value="">
-
-
-                  
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
-      
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                    </div> 
-                  </div> <!-- row -->
-      
-                  <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                  </div>
-      
-                  <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
-                  </div>
-
-                  <!-- v2.0 -->
-                  <!-- Google reCAPTCHA widget -->
-                  <div class="g-recaptcha" data-sitekey=""></div>
-
-                  <div class="button-area">
-                    <button type="submit">Send Message</button>
-                    <span></span>
-                  </div>
-
-                </form>
-
-            </div><!-- col-lg-8 -->
-            
-        </div> <!-- row gx-lg-0 gy-4 -->
-    </div> <!-- container -->
-
-
-        <!-- v1.8 start 
-        Bootstrap Modal for Displaying Messages 1.8 ends -->
-        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="messageModalLabel">Message Status</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="messageModalBody">
-                        
-                    </div>
-                </div>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funding Opportunity
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="grantcall.html">Grant Calls</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Grant Call Awardee</a></li>
+                      </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="reference_library.html">Reference Library</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Digital Directory
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="search_people.html">Search</a></li>
+                      </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Join us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactform.html">Contact us</a>
+                    </li>
+                </ul>
             </div>
         </div>
+      </nav>
+    
+
+      
+<!-- Banner Section -->
+<div class="banner-section">
+    
+    <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
+            
+    <div class="banner-text">
+        <h1>Contact Us</h1>
+    </div>
+</div>
+
+
+<div class="main-content-wrapper">
+  <section id="contact-1" class="contact">
+      <div class="container">
+          <div class="row gx-lg-0 gy-4">
+              <div class="col-lg-4">
+                  <div class="info-container align-items-center justify-content-center">                 
+                      <div class="info-item d-flex">
+                          <i class="bi bi-envelope flex-shrink-0"></i>
+                          <div>
+                              <h4>Email Us</h4>
+                              <p>Use the Contact Us form to email us. We will respond within 3 – 5 business days.</p>
+                          </div>
+                      </div><!-- End Info Item -->
+                  </div> <!-- info-container -->
+              </div> <!-- col-lg-4 -->
+
+              <div class="col-lg-8">
+                  <form action="c_assets/php/message.php" class="php-email-form" method="post">
+                      <!-- v1.8 CSRF Token -->
+                      <input type="hidden" name="csrf_token" id="csrf_token" value="">
+
+                      <div class="row">
+                          <div class="col-md-6 form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                          </div>
+          
+                          <div class="col-md-6 form-group mt-3 mt-md-0">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                          </div> 
+                      </div> <!-- row -->
+          
+                      <div class="form-group mt-3">
+                          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                      </div>
+          
+                      <div class="form-group mt-3">
+                          <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                      </div>
+
+                      <!-- v2.0 -->
+                      <!-- Google reCAPTCHA widget -->
+                      <div class="g-recaptcha" data-sitekey=""></div>
+
+                      <div class="button-area">
+                          <button type="submit">Send Message</button>
+                          <span></span>
+                      </div>
+
+                  </form>
+              </div><!-- col-lg-8 -->
+          </div> <!-- row gx-lg-0 gy-4 -->
+      </div> <!-- container -->
   </section>
+</div>
 
 
 
+
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <!-- <div class="container copyright text-center mt-4"> -->
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="sitename">Trust Tech SG</strong> <span>All Rights Reserved</span></p>
+    </div>
+  
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Message Handler -->
 <script src="c_assets/js/message.js"></script> <!-- v1.3 -->
@@ -171,5 +165,6 @@
 
 
 </body>
+
 
 </html>

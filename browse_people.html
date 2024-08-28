@@ -1,115 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Browse</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
-    <meta name="referrer" content="no-referrer"> <!-- v1.9 -->
-
-    <title>Browse Directory</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" integrity="sha384-DWBy58SIofdQphsInVGgrsjREQqJ7CATor6e+c2IGPqKoHI2GR8sb+vBOX1OucHq" crossorigin="anonymous"> <!-- Material Design Icons -->
 
-    <link rel="stylesheet" href="c_assets/css/browse.css"> <!-- v1.9 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
+    <link href="c_assets/css/browse.css" rel="stylesheet"> 
     
-</head>
+ 
 
+</head>
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Menu Items -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Funding Opportunity
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="grantcall.html">Grant Calls</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Grant Call Awardee</a></li>
+                  </ul>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="reference_library.html">Reference Library</a>
-                    </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reference_library.html">Reference Library</a>
+                </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Digital Directory
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="search_people.html">Search</a></li>
-                        </ul>
-                      </li>
-                      
-                    <li class="nav-item">
-                        <a class="nav-link" href="registration.html">Join us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/forum/" target="_blank">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactform.html">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Digital Directory
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="search_people.html">Search</a></li>
+                  </ul>
+                </li>
 
-
-    <!-- Banner Section -->
-    <div class="banner-section">
-    
-        <!-- <img src="c_assets/photos/BANNER_BOK_high_resolution.png" class="banner-image"> -->
-            
-        <div class="banner-text">
-            <h1>Trust Tech Networks</h1>
-            <p>Connecting Industry and Academia</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Join us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactform.html">Contact us</a>
+                </li>
+            </ul>
         </div>
     </div>
+  </nav>
+
+
+      
+<!-- Banner Section -->
+<div class="banner-section">
+    
+    <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
+            
+    <div class="banner-text">
+        <h1>Trust Tech Network</h1>
+    </div>
+</div>
+
 
 
     <!-- Donut Chart -->
     <div class="chart-container">
-        <div class="donut-container"></div>
+      <div class="donut-container"></div>
+  </div>
+
+  <div class="combined-container">
+  <div class="container" id="container-1"> 
+      <!-- Filter Buttons -->
+      <div class="row">
+          <div class="col-12 mb-3 filter-buttons">
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('All')">All</button>
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Accreditation')">Trusted Accreditation</button>
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Analysis')">Trusted Analysis</button>
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Compute')">Trusted Compute</button>
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Digital ID and Web 3.0')">Trusted Digital ID and Web 3.0</button>     
+              <button class="btn btn-outline-primary filter-button" onclick="filterCards('Others')">Others</button>
+          </div>
+       </div>
+     </div> 
+
+      <div class="line-container" id="line-container2">
+          <div class="thick-line"></div>
+      </div>
+
+      <div class="container" id="container-2">
+          <div class="row">            
+              
+          </div> <!-- row -->
+      </div> <!-- container -->
+  </div>
+
+
+
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <!-- <div class="container copyright text-center mt-4"> -->
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="sitename">Trust Tech SG</strong> <span>All Rights Reserved</span></p>
     </div>
-
-    <div class="combined-container">
-    <div class="container" id="container-1"> 
-        <!-- Filter Buttons -->
-        <div class="row">
-            <div class="col-12 mb-3 filter-buttons">
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('All')">All</button>
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Accreditation')">Trusted Accreditation</button>
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Analysis')">Trusted Analysis</button>
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Compute')">Trusted Compute</button>
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('Trusted Digital ID and Web 3.0')">Trusted Digital ID and Web 3.0</button>     
-                <button class="btn btn-outline-primary filter-button" onclick="filterCards('Others')">Others</button>
-            </div>
-         </div>
-       </div> 
-
-        <div class="line-container" id="line-container2">
-            <div class="thick-line"></div>
-        </div>
-
-        <div class="container" id="container-2">
-            <div class="row">            
-                
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
+  
+</footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.1/dist/apexcharts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="c_assets/js/browse.js"></script>
-    
-
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.1/dist/apexcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="c_assets/js/browse.js"></script>
 </body>
+
+
 </html>

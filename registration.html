@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <meta name="referrer" content="no-referrer"> <!-- v1.9 -->
-  
-  <title>Registration Form</title>
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="c_assets/css/registration_form.css" rel="stylesheet"> 
-  
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <link href="c_assets/css/registration_form.css" rel="stylesheet"> 
+    
+ 
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +35,17 @@
                 <!-- Menu Items -->
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Funding Opportunity
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="grantcall.html">Grant Calls</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Grant Call Awardee</a></li>
+                  </ul>
                 </li>
 
                 <li class="nav-item">
@@ -48,12 +62,12 @@
                     <li><a class="dropdown-item" href="search_people.html">Search</a></li>
                   </ul>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="registration.html">Join us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/forum/" target="_blank">Forum</a>
+                    <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contactform.html">Contact us</a>
@@ -63,158 +77,160 @@
     </div>
   </nav>
 
-</head>
 
-<body>
-
-  <!--
-  <div class="hero-container">
-    <h2>Some Information Here</h2> 
-  </div>
-  -->
-
-  <!-- Banner Section -->
-  <div class="banner-section">
+      
+<!-- Banner Section -->
+<div class="banner-section">
     
     <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
             
-      <div class="banner-text">
-          <h1>BODY OF KNOWLEDGE</h1>
-              <p>Join the Trust-Tech community today!</p>
-      </div>
-  </div>
-
-     
+    <div class="banner-text">
+        <h1>Join The Community</h1>
+    </div>
+</div>
 
 
-  <div class="container-form">
-       <!-- <form action="thank-you.html"> -->
-        <form action="c_assets/php/connect.php" method="post" id="regForm">
-          <h2>Registration Form</h2>
-    
-    
-          <div class="form-group fullname">
-            <label>Name</label>
-            <div class="name-container">
-              <div class="form-group f_first-name">
-                <input type="text" id="f_firstname" placeholder="First name">
-              </div>
-              <div class="form-group f_last-name">
-                <input type="text" id="f_lastname" placeholder="Last name (Optional)"> <!-- v1.8 -->
-              </div>
-            </div>
-          </div>
-    
-          <div class="form-group f_gender">
-            <label for="f_gender">Gender</label>
-            <select id="f_gender">
-              <option value="" selected disabled>Select your gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          
-          <div class="form-group f_email">
-            <label for="f_email">Email Address</label>
-            <input type="text" id="f_email" placeholder="Enter your email address">
-          </div>
-    
-          <div class="form-group f_affiliated_organization">
-            <label for="f_affiliated_organization">Affiliated Organization</label>
-            <input type="text" id="f_affiliated_organization" placeholder="Enter your organization">
-          </div>
-    
-          <div class="form-group f_research_interest">
-            <label for="f_research_interest">Research Interest (Topic only)</label>
-            <p>Trusted Accreditation, Trusted Analysis, Trusted Compute, Trusted Digital ID and Web 3.0, and Others</p>
-            <input type="text" id="f_research_interest" placeholder="Enter your research interest">
-          </div>
-    
-          
-          <div class="form-group f_area">
-            <label for="f_area">Field</label>
-            <select id="f_area">
-              <option value="" selected disabled>Select your field</option>
-              <option value="industry">Industry</option>
-              <option value="ihl">IHL</option>
-            </select>
-          </div>
 
-          <!-- debug starts -->
-
-          <div class="form-group radio-group">
-            <label for="yes-no-question">
-              Would you consent to the collection and inclusion of your information in 
-              a directory, as well as its publication on a website with the purpose of establishing 
-              a digital trust community?
-            </label>
-
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" value="Yes">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Yes
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" value="No">
-              <label class="form-check-label" for="flexRadioDefault2">
-                No
-              </label>
-            </div>            
-          </div>
-
-
-          <div class="form-group radio-group-1">
-            <label for="yes-no-question-1">
-              Are you interested in receiving information related to the activities 
-              of Digital Trust Centre, including meetings, seminars, workshop, 
-              and roundtable discussions, as well as its newsletter?
-            </label>
-
-            <div class="form-check-1">
-              <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" value="Yes">
-              <label class="form-check-label" for="flexRadioDefault3">
-                Yes
-              </label>
-             </div>
-             <div class="form-check-1">
-              <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" value="No">
-              <label class="form-check-label" for="flexRadioDefault4">
-                No
-              </label>
-             </div>
-          </div>
-          
-
-
-          
-          <!-- debug ends -->
-    
-          <!-- not using input type 
-          <div class="form-group submit-btn">
-            <input type="submit" value="Submit">
-          </div>
-          -->
-    
-          <div class="form-group submit-btn">
-            <button id="register">Register</button>
-          </div>
-    
-          
-        </form>
-  </div>
+<div class="container-form">
+    <!-- <form action="thank-you.html"> -->
+     <form action="c_assets/php/connect.php" method="post" id="regForm">
+       <h2>Registration Form</h2>
  
+ 
+       <div class="form-group fullname">
+         <label>Name</label>
+         <div class="name-container">
+           <div class="form-group f_first-name">
+             <input type="text" id="f_firstname" placeholder="First name">
+           </div>
+           <div class="form-group f_last-name">
+             <input type="text" id="f_lastname" placeholder="Last name (Optional)"> <!-- v1.8 -->
+           </div>
+         </div>
+       </div>
+ 
+       <div class="form-group f_gender">
+         <label for="f_gender">Gender</label>
+         <select id="f_gender">
+           <option value="" selected disabled>Select your gender</option>
+           <option value="Male">Male</option>
+           <option value="Female">Female</option>
+           <option value="Other">Other</option>
+         </select>
+       </div>
+       
+       <div class="form-group f_email">
+         <label for="f_email">Email Address</label>
+         <input type="text" id="f_email" placeholder="Enter your email address">
+       </div>
+ 
+       <div class="form-group f_affiliated_organization">
+         <label for="f_affiliated_organization">Affiliated Organization</label>
+         <input type="text" id="f_affiliated_organization" placeholder="Enter your organization">
+       </div>
+ 
+       <div class="form-group f_research_interest">
+         <label for="f_research_interest">Research Interest (Topic only)</label>
+         <p>Trusted Accreditation, Trusted Analysis, Trusted Compute, Trusted Digital ID and Web 3.0, and Others</p>
+         <input type="text" id="f_research_interest" placeholder="Enter your research interest">
+       </div>
+ 
+       
+       <div class="form-group f_area">
+         <label for="f_area">Field</label>
+         <select id="f_area">
+           <option value="" selected disabled>Select your field</option>
+           <option value="industry">Industry</option>
+           <option value="ihl">IHL</option>
+         </select>
+       </div>
+
+       <!-- debug starts -->
+
+       <div class="form-group radio-group">
+         <label for="yes-no-question">
+           Would you consent to the collection and inclusion of your information in 
+           a directory, as well as its publication on a website with the purpose of establishing 
+           a digital trust community?
+         </label>
+
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" value="Yes">
+           <label class="form-check-label" for="flexRadioDefault1">
+             Yes
+           </label>
+         </div>
+         <div class="form-check">
+           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" value="No">
+           <label class="form-check-label" for="flexRadioDefault2">
+             No
+           </label>
+         </div>            
+       </div>
+
+
+       <div class="form-group radio-group-1">
+         <label for="yes-no-question-1">
+           Are you interested in receiving information related to the activities 
+           of Digital Trust Centre, including meetings, seminars, workshop, 
+           and roundtable discussions, as well as its newsletter?
+         </label>
+
+         <div class="form-check-1">
+           <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" value="Yes">
+           <label class="form-check-label" for="flexRadioDefault3">
+             Yes
+           </label>
+          </div>
+          <div class="form-check-1">
+           <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" value="No">
+           <label class="form-check-label" for="flexRadioDefault4">
+             No
+           </label>
+          </div>
+       </div>
+       
+
+
+       
+       <!-- debug ends -->
+ 
+       <!-- not using input type 
+       <div class="form-group submit-btn">
+         <input type="submit" value="Submit">
+       </div>
+       -->
+ 
+       <div class="form-group submit-btn">
+         <button id="register">Register</button>
+       </div>
+ 
+       
+     </form>
+
+</div> <!-- container-form -->
+
+
+ 
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+
+
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <!-- <div class="container copyright text-center mt-4"> -->
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="sitename">Trust Tech SG</strong> <span>All Rights Reserved</span></p>
+    </div>
   
-    
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
+</footer>
 
 
 
-  
   <!-- v1.4 starts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -235,8 +251,8 @@
         });
     });
   </script>
-  
-  
+
 </body>
+
 
 </html>

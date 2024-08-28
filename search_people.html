@@ -1,173 +1,188 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta name="referrer" content="no-referrer"> <!-- v1.9 -->
+    <title>Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
 
-  <title>Search Directory</title>
 
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- DataTables CSS for Bootstrap 5 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap5.min.css" />
+    
 
-  <link rel="stylesheet" href="c_assets/css/search.css"> <!-- v1.9 -->
-
-  <!-- DataTables CSS for Bootstrap 5 -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap5.min.css" />
+    <link href="c_assets/css/search.css" rel="stylesheet"> 
+    
+ 
 
 </head>
+<body>
 
-<body> 
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Menu Items -->
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Menu Items -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Funding Opportunity
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="grantcall.html">Grant Calls</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Grant Call Awardee</a></li>
+                  </ul>
+                </li>
 
-                    <li class="nav-item">
-                      <a class="nav-link" href="reference_library.html">Reference Library</a>
-                    </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reference_library.html">Reference Library</a>
+                </li>
 
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Digital Directory
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="search_people.html">Search</a></li>
-                      </ul>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="registration.html">Join us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/forum/" target="_blank">Forum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactform.html">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Digital Directory
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="search_people.html">Search</a></li>
+                  </ul>
+                </li>
 
-
-    <!-- Banner Section -->
-    <div class="banner-section">
-    
-      <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
-            
-      <div class="banner-text">
-        <h1>Trust Tech Networks</h1>
-        <p>Connecting Industry and Academia</p>
-      </div>
-    </div>
-
-
-    <div class="note-container">
-        <div class="table-header">
-            <p><b><i>Note:&nbsp&nbsp</b>If you would like to participate in the people directory, please submit the registration form <b><a href="registration.html" class="register-link"><u>here</u></a></b></i>.</p>
+                <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Join us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactform.html">Contact us</a>
+                </li>
+            </ul>
         </div>
     </div>
+  </nav>
 
-    <div class="filter-container">
 
-        <div class="mb-3">
-            <label for="filter-aff-org" class="form-label">Affiliated Organization:</label>
-            <select id="filter-aff-org" class="form-select">
-              <option value="" class="center-option">ALL</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="filter-research-int" class="form-label">Research Interest:</label>
-            <select id="filter-research-int" class="form-select">
-              <option value="" class="center-option">ALL</option>
-              <option value="Trusted Analysis">Trusted Analysis</option>
-              <option value="Trusted Digital ID and Web 3.0">Trusted Digital ID and Web 3.0</option>
-              <option value="Trusted Compute">Trusted Compute</option>
-              <option value="Trusted Accreditation">Trusted Accreditation</option>
-              <option value="Others">Others</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="filter-industry" class="form-label">Industry/IHL:</label>
-            <select id="filter-industry" class="form-select">
-              <option value="" class="center-option">ALL</option>
-              <option value="IHL">IHL</option>
-              <option value="Industry">Industry</option>
-            </select>
-        </div>
-
-      </div> <!-- filter container-->
-
-    <div class="content-container">
-      <div class="table-container">
-      <!-- <table id="community-table" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%"> --> <!-- nowrap -->
-          <!-- New text element -->
       
-      <table id="community-table" class="table table-striped table-bordered wrap" cellspacing="0" width="100%">
+<!-- Banner Section -->
+<div class="banner-section">
+    
+    <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
+            
+    <div class="banner-text">
+        <h1>Trust Tech Network</h1>
+    </div>
+</div>
+
+
+<div class="note-container">
+    <div class="table-header">
+        <p><b><i>Note:&nbsp&nbsp</b>If you would like to participate in the people directory, please submit the registration form <b><a href="registration.html" class="register-link"><u>here</u></a></b></i>.</p>
+    </div>
+</div>
+
+<div class="filter-container">
+
+    <div class="mb-3">
+        <label for="filter-aff-org" class="form-label">Affiliated Organization:</label>
+        <select id="filter-aff-org" class="form-select">
+          <option value="" class="center-option">ALL</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="filter-research-int" class="form-label">Research Interest:</label>
+        <select id="filter-research-int" class="form-select">
+          <option value="" class="center-option">ALL</option>
+          <option value="Trusted Analysis">Trusted Analysis</option>
+          <option value="Trusted Digital ID and Web 3.0">Trusted Digital ID and Web 3.0</option>
+          <option value="Trusted Compute">Trusted Compute</option>
+          <option value="Trusted Accreditation">Trusted Accreditation</option>
+          <option value="Others">Others</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="filter-industry" class="form-label">Industry/IHL:</label>
+        <select id="filter-industry" class="form-select">
+          <option value="" class="center-option">ALL</option>
+          <option value="IHL">IHL</option>
+          <option value="Industry">Industry</option>
+        </select>
+    </div>
+
+</div> <!-- filter container-->
+
+
+
+<div class="content-container">
+  <div class="table-container">
+  <!-- <table id="community-table" class="table table-striped table-bordered nowrap" cellspacing="0" width="100%"> --> <!-- nowrap -->
+      <!-- New text element -->
+  
+    <table id="community-table" class="table table-striped table-bordered wrap" cellspacing="0" width="100%">
         <thead>
-          <tr>
+        <tr>
             <th>Name</th>
             <th>Affiliated Orgranization</th>
             <th>Research Interest</th>
             <th>Industry/IHL</th>
             <th>Email</th>
-          </tr>
+        </tr>
         </thead>
-  
+
         <tbody>
             <!-- No static rows, data will be loaded via Ajax -->
         </tbody>
-  
-      </table>
-      </div> <!-- table container -->
-  
 
-      
+    </table>
+  </div> <!-- table container -->
+</div> <!-- content container -->
 
-    </div> <!-- content container -->
 
-      
 
-    
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-  <!-- Bootstrap 5 JS Bundle (includes Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<footer id="footer" class="footer position-relative light-background">
+
+    <!-- <div class="container copyright text-center mt-4"> -->
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="sitename">Trust Tech SG</strong> <span>All Rights Reserved</span></p>
+    </div>
   
-  <script src="c_assets/js/search.js"></script> <!-- v1.9 -->
-      
-  <!-- DataTables JS -->
-  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-  <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
-  <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
-    
-  
+</footer>
 
-  
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="c_assets/js/search.js"></script> <!-- v1.9 -->
+        
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
+
+
 </body>
 
+
 </html>
-
-
