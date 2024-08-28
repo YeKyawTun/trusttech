@@ -1,26 +1,35 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
-body {
-  font-family: 'Rubik', sans-serif;
-  /* display: flex; */
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 50px;
-
-  /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 20 20" fill="grey"><circle cx="1" cy="1" r="1"/></svg>');
-  background-size: 10px 10px; */
+.main-content-wrapper {
+    flex: 1; /* This makes the wrapper take up the remaining space */
+    padding-bottom: 50px; /* Ensure there is some space between the content and the footer */
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 
 .container-fluid {
   padding-right: 10%; /* Adjusts padding to push content from the right */
@@ -28,11 +37,10 @@ html {
 
 .navbar-brand {
   margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
-  color: #F8F8FF !important; 
+  color: #F8F8FF !important;
 }
 
 .navbar {
-  /* background-color: transparent !important;*/
   background-color: #161A30;
 }
 
@@ -44,10 +52,7 @@ html {
   color: #007bff !important; /* Bootstrap's default blue */
 }
 
-
-
 .banner-section {
-            
   color: white;
   position: relative;
   width: 100%;
@@ -55,111 +60,40 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* to debug box-shadow: 0 4px 12px -2px rgba(214, 9, 9, 0.3); */    
   margin-bottom: 20px;
-
   background-image: url('../photos/BANNER_BOK_1.png');
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70px;
 }
-
 
 .banner-image {
   width: 100%;
-
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Cover the container while preserving aspect ratio */
   display: block; /* Remove any extra space below the image */
-
 }
-
 
 .banner-text {
   position: absolute;
   color: rgb(255, 255, 255);
   font-size: 20px;
   padding: 20px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   max-width: 50%;
 }
 
 .banner-text h1 {
   margin-bottom: 30px;
+  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically adjusts font size */
+  overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
 }
-
 
 .banner-text p {
-  font-weight: bold;
+  font-size: clamp(0.5rem, 1.5vw, 1.3rem);
 }
 
-
-@media (min-width: 1025px) and (max-width: 5500px) {
-  .banner-section {
-      height: 30vh; /* Same as the height of the cards */
-      margin-bottom: 0px;
-      
-  }
-  
-  .banner-image {
-      width: 100%;
-      height: 30vh; /* Same as the height of the banner section */
-  }
-
-  .banner-text {
-      position: absolute;
-      color: rgb(255, 255, 255);
-      font-size: 20px;
-      padding: 20px;
-      /* background-color: rgba(0, 0, 0, 0.5); */
-      max-width: 70%;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 1024px) {
-  .banner-section {
-      height: 30vh; /* Same as the height of the cards */
-      margin-bottom: 10px;
-      
-  }
-  
-  .banner-image {
-      width: 100%;
-      height: 30vh; /* Same as the height of the banner section */
-  }
-
-  .banner-text {
-      position: absolute;
-      color: rgb(255, 255, 255);
-      font-size: 15px;
-      padding: 20px;
-      /* background-color: rgba(0, 0, 0, 0.5); */
-      max-width: 80%;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .banner-section {
-      height: 30vh; /* Same as the height of the cards */
-      margin-bottom: 10px;
-      
-  }
-  
-  .banner-image {
-      width: 100%;
-      height: 30vh; /* Same as the height of the banner section */
-  }
-
-  .banner-text {
-      position: absolute;
-      color: rgb(255, 255, 255);
-      font-size: 12px;
-      padding: 20px;
-      /* background-color: rgba(0, 0, 0, 0.5); */
-      max-width: 80%;
-  }
-}
 
 
 
@@ -403,5 +337,111 @@ color: #6f6f6f;
 
 
 
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  background-color: gray;
+  font-size: 14px;
+  padding-bottom: 50px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+}
 
 
+
+
+/* Media Queries */
+@media (min-width: 1025px) and (max-width: 5500px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 0px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 20px;
+    max-width: 70%;
+  }
+}
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 20px;
+    max-width: 80%;
+  }
+
+  
+}

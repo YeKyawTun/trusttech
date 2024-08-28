@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
-
 
 html, body {
   height: 100%;
@@ -33,11 +34,10 @@ html {
 
 .navbar-brand {
   margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
-  color: #F8F8FF !important; 
+  color: #F8F8FF !important;
 }
 
 .navbar {
-  /* background-color: transparent !important;*/
   background-color: #161A30;
 }
 
@@ -105,62 +105,52 @@ html {
 
 
 
-
-.referencelibrary1 {
-    /*background-color: green;*/
-    margin-bottom: 20px;
+.researchgrantcall {
+  /*background-color: #f8f7f5;*/
+  padding: 20px; /* Adds padding for better text readability */
+  border-radius: 8px; /* Optional: adds rounded corners */
+  text-align: justify;
 }
 
-.referencelibrary1 .container {
-    /*display: flex;*/
-    /*background-color: orange;*/
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    
+
+
+.table-striped-columns {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto; /* Centers the table */
+  margin-bottom: 15px;
 }
 
-.referencelibrary1 .card {
-    height: 300px;
-    border-radius: 30px;
-    border-width: 5px;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+.table-striped-columns th, .table-striped-columns td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
 }
 
-.referencelibrary1 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.custom-accordion {
+  width: 50%;
+  margin: 0 auto; /* Centers the accordion */
+  margin-bottom: 10px;
+  border: 1px solid #000; /* Adds a black outer border around the accordion */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  padding: 10px; /* Adds padding inside the border */
 }
 
-.referencelibrary1 .card-body {
-    display: flex;
-    /*flex-direction: column;*/
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-@media (max-width: 1199px) {
-
-    .referencelibrary1 .col-xl-4 {
-        padding: 10px;
-    }
-    
-}
 
 
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
+  color: var(--default-color);
   background-color: gray;
   font-size: 14px;
   padding-bottom: 50px;
-  text-align: center;
-  margin-top: auto;
-  width: 100%;
+  position: relative;
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
 }
 
 .footer .copyright {
@@ -178,30 +168,49 @@ html {
   font-size: 13px;
 }
 
+@media (max-width: 992px) {
+.table-striped-columns {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Centers the table */
+    margin-bottom: 10px;
+}
+
+.custom-accordion {
+    width: 90%;
+    margin: 0 auto; /* Centers the accordion */
+    margin-bottom: 10px;
+}
+
+}
+
+
+
+
 
 
 /* Media Queries */
 @media (min-width: 1025px) and (max-width: 5500px) {
-  .banner-section {
-    min-height: 30vh;
-    height: 30vh; /* Same as the height of the cards */
-    margin-bottom: 0px;
-    padding: 0;
-    margin: 0;
-  }
+.banner-section {
+  min-height: 30vh;
+  height: 30vh !important; /* Same as the height of the cards */
+  margin-bottom: 0px;
+  padding: 0;
+  margin: 0;
+}
 
-  .banner-image {
-    width: 100%;
-    height: 30vh; /* Same as the height of the banner section */
-  }
+.banner-image {
+  width: 100%;
+  height: 30vh; /* Same as the height of the banner section */
+}
 
-  .banner-text {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    padding: 20px;
-    max-width: 70%;
-  }
+.banner-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 20px;
+  max-width: 70%;
+}
 }
 
 
@@ -209,50 +218,71 @@ html {
 
 
 @media (min-width: 481px) and (max-width: 1024px) {
-  .banner-section {
-    min-height: 30vh;
-    height: 30vh; /* Same as the height of the cards */
-    margin-bottom: 10px;
-    padding: 0;
-    margin: 0;
-  }
+.banner-section {
+  min-height: 30vh;
+  height: 30vh !important; /* Same as the height of the cards */
+  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+}
 
-  .banner-image {
-    width: 100%;
-    height: 30vh; /* Same as the height of the banner section */
-  }
+.banner-image {
+  width: 100%;
+  height: 30vh; /* Same as the height of the banner section */
+}
 
-  .banner-text {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    padding: 20px;
-    max-width: 80%;
-  }
+.banner-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding: 20px;
+  max-width: 80%;
+}
 }
 
 
 
 
 @media (max-width: 480px) {
-  .banner-section {
-    min-height: 30vh;
-    height: 30vh; /* Same as the height of the cards */
-    margin-bottom: 10px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .banner-image {
-    width: 100%;
-    height: 30vh; /* Same as the height of the banner section */
-  }
-
-  .banner-text {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    padding: 20px;
-    max-width: 80%;
-  }
+.banner-section {
+  min-height: 30vh;
+  height: 30vh !important; /* Same as the height of the cards */
+  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
 }
+
+.banner-image {
+  width: 100%;
+  height: 30vh; /* Same as the height of the banner section */
+}
+
+.banner-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  padding: 20px;
+  max-width: 80%;
+}
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

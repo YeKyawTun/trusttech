@@ -7,20 +7,37 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
-  font-family: 'Rubik', sans-serif;
+/*body {
+  font-family: 'Rubik', sans-serif; */
   /* display: flex; */
+  /*
   flex-direction: column;
   align-items: center;
   gap: 20px;
   margin-top: 50px;
+  flex: 1;
+  */
 
   /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 20 20" fill="grey"><circle cx="1" cy="1" r="1"/></svg>');
   background-size: 10px 10px; */
-}
+/*}*/
 
 html {
   scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+  
+body {
+    font-family: 'Rubik', sans-serif;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .container-fluid {
@@ -385,6 +402,32 @@ html {
 }
 
 
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+    background-color: gray;
+    font-size: 14px;
+    padding-bottom: 50px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer .copyright {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.footer .copyright p {
+    margin-bottom: 0;
+}
+
+.footer .credits {
+    margin-top: 6px;
+    font-size: 13px;
+}
 
   
 

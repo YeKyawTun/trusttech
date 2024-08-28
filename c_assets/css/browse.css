@@ -1,127 +1,126 @@
-* 
-{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 50px;
+  font-family: 'Rubik', sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+
 .container-fluid {
-    padding-right: 10%; /* Adjusts padding to push content from the right */
+  padding-right: 10%; /* Adjusts padding to push content from the right */
 }
 
 .navbar-brand {
-    margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
-    color: #F8F8FF !important; 
+  margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
+  color: #F8F8FF !important;
 }
 
 .navbar {
-    /* background-color: transparent !important;*/
-    background-color: #161A30;
+  background-color: #161A30;
 }
 
 .navbar-nav .nav-link {
-    color: #F8F8FF !important; /* Pure white */
+  color: #F8F8FF !important; /* Pure white */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff !important; /* Bootstrap's default blue */
+  color: #007bff !important; /* Bootstrap's default blue */
 }
 
 .banner-section {
-    
-    color: white;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* to debug box-shadow: 0 4px 12px -2px rgba(214, 9, 9, 0.3); */    
-    margin-bottom: 20px;
-
-    background-image: url('../photos/BANNER_BOK_1.png');
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    
-    padding-top: 70px;
-    height: 50vh;
+  color: white;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  background-image: url('../photos/BANNER_BOK_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70px;
 }
-
-
 
 .banner-image {
-    width: 100%;
-
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the container while preserving aspect ratio */
-    display: block; /* Remove any extra space below the image */
-
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+  display: block; /* Remove any extra space below the image */
 }
-
 
 .banner-text {
-    position: absolute;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    padding: 20px;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    max-width: 50%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 20px;
+  max-width: 50%;
 }
 
 .banner-text h1 {
-    margin-bottom: 30px;
-    font-weight: bold;
-    font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically adjusts font size */
-    overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically adjusts font size */
+  overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
 }
-
 
 .banner-text p {
-    font-size: clamp(0.5rem, 1.5vw, 1.3rem);;
+  font-size: clamp(0.5rem, 1.5vw, 1.3rem);
 }
 
-/*
-.banner-text h1 {
-    margin-bottom: 30px;
-    font-weight: bold;
+.hero-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures that the text within the container is centered */
+  margin-top: 20px;
+}
+
+.hero-container h2 {
+  margin: 0; /* Removes default margin of the heading */
 }
 
 
-.banner-text p {
-    font-weight: bold;
-}
-*/
 
-
-
+/* -------------------------------------------------------------
+# Donut 
+---------------------------------------------------------------*/
 
 .donut-container {
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    box-shadow: 0 0 8px gray;
-    border: 1px solid #ddd; /* Border added here */
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  box-shadow: 0 0 8px gray;
+  border: 1px solid #ddd; /* Border added here */
 }
 
 
 .combined-container {
-    box-shadow: 0 0 8px gray;
-    border: 1px solid #ddd; /* Border added here */
-    margin: 20px; /* Adjust or remove margin as per your layout needs */
-    padding-top: 10px;
+  box-shadow: 0 0 8px gray;
+  border: 1px solid #ddd; /* Border added here */
+  margin: 20px; /* Adjust or remove margin as per your layout needs */
+  padding-top: 10px;
 
 }
 
@@ -129,250 +128,280 @@ html {
 
 /* Custom pearl color for cards */
 .card-color {
-    background-color: #ece2aa6f; /* Pearl color */
-    color: #333; /* Adjust text color as needed */
+  background-color: #ece2aa6f; /* Pearl color */
+  color: #333; /* Adjust text color as needed */
 }
 
 /* Custom style for icon and text alignment */
 .icon-text {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .icon-text i {
-    margin-right: 5px; /* Adjust space between icon and text */
+  margin-right: 5px; /* Adjust space between icon and text */
 }
 
 .icon-text span {
-    flex: 1; /* Allows text to wrap and fill the available space */
-    white-space: normal; /* Ensures text wraps within container */
-    overflow-wrap: break-word; /* Allows unbreakable words to be broken */
-    word-wrap: break-word; /* Deprecated, but for compatibility with older browsers */
-    max-width: 100%; /* Ensures the text does not exceed the container's width */
+  flex: 1; /* Allows text to wrap and fill the available space */
+  white-space: normal; /* Ensures text wraps within container */
+  overflow-wrap: break-word; /* Allows unbreakable words to be broken */
+  word-wrap: break-word; /* Deprecated, but for compatibility with older browsers */
+  max-width: 100%; /* Ensures the text does not exceed the container's width */
 }
 
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
 
 /* Equal height cards */
 .card-padding {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-padding .card {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 
 /* Flexbox layout for filter buttons */
 .filter-buttons {
-    display: flex;
-    gap: 10px; /* Spacing between buttons */
-    margin-bottom: 20px; /* Spacing below the button group */
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
+  margin-bottom: 20px; /* Spacing below the button group */
 }
 
 .filter-button {
-    flex: 1; /* Each button will take equal width */
-    cursor: pointer;
+  flex: 1; /* Each button will take equal width */
+  cursor: pointer;
 }
 
 /* Style modifications for buttons */
 button.filter-button {
-    width: 100%; /* Full width for each button */
-    padding: 10px; /* Padding inside the button */
+  width: 100%; /* Full width for each button */
+  padding: 10px; /* Padding inside the button */
 }
 
 #container-1 {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 
 #container-2 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .filter-button {
-    color: #fff;
-    background-color: navy;
+  color: #fff;
+  background-color: navy;
 }
 
 #line-container2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 8vh;
-    margin-top: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 
 #line-container2 .thick-line {
-    border: none;
-    border-top: 5px solid #001440d7; /* v1.6 */
-    align-items: center;
-    justify-content: center;
-    width: 30%;
+  border: none;
+  border-top: 5px solid #001440d7; /* v1.6 */
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 
-/* Media Queries */
+
 @media (min-width: 1025px) and (max-width: 5500px) {
-    .banner-section {
-        height: 30vh; /* Same as the height of the cards */
-        margin-bottom: 0px;
-        
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 30vh; /* Same as the height of the banner section */
-    }
+  .donut-container {
+      align-items: center;
+      justify-content: center;
+      margin-left: 20%;
+      margin-right: 20%;
+  }
 
-    .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 70%;
-    }
-
-    .donut-container {
-        align-items: center;
-        justify-content: center;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-
-    .combined-container {
-        align-items: center;
-        justify-content: center;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
+  .combined-container {
+      align-items: center;
+      justify-content: center;
+      margin-left: 20%;
+      margin-right: 20%;
+  }
 }
+
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .banner-section {
-        height: 30vh; /* Same as the height of the cards */
-        margin-bottom: 10px;
-        
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 30vh; /* Same as the height of the banner section */
-    }
 
-    .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 15px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 80%;
-    }
-
-    /* Update starts here */
-    .donut-container, .combined-container {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(100% - 40px); /* Subtracting padding or margin if any */
-    }
+  /* Update starts here */
+  .donut-container, .combined-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 40px); /* Subtracting padding or margin if any */
+  }
 }
 
 
 @media (min-width: 481px) and (max-width: 1024px) {
-    .banner-section {
-        height: 30vh; /* Same as the height of the cards */
-        margin-bottom: 10px;
-        
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 30vh; /* Same as the height of the banner section */
-    }
-
-    .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 15px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 80%;
-    }
-
-    /* Update starts here */
-    .donut-container, .combined-container {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(100% - 40px); /* Subtracting padding or margin if any */
-    }
+  /* Update starts here */
+  .donut-container, .combined-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 40px); /* Subtracting padding or margin if any */
+  }
 
 
-    .filter-buttons {
-        display: flex;
-        flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
-        gap: 10px; /* Maintains spacing between buttons */
-    }
+  .filter-buttons {
+      display: flex;
+      flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
+      gap: 10px; /* Maintains spacing between buttons */
+  }
 
-    .filter-buttons .btn {
-        flex: 1 0 calc(50% - 10px); /* Allows buttons to take half the container width minus the gap */
-        margin-bottom: 10px; /* Adds a margin at the bottom for spacing between wrapped rows */
-    }
+  .filter-buttons .btn {
+      flex: 1 0 calc(50% - 10px); /* Allows buttons to take half the container width minus the gap */
+      margin-bottom: 10px; /* Adds a margin at the bottom for spacing between wrapped rows */
+  }
 
 
 }
 
 
 @media (max-width: 480px) {
-    .banner-section {
-        height: 30vh; /* Same as the height of the cards */
-        margin-bottom: 10px;
-        
-    }
-    
-    .banner-image {
-        width: 100%;
-        height: 30vh; /* Same as the height of the banner section */
-    }
-
-    .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 12px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 80%;
-    }
-
-    /* Update starts here */
-    .donut-container, .combined-container {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(100% - 10px); /* Subtracting padding or margin if any */
-    }
+  /* Update starts here */
+  .donut-container, .combined-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(100% - 10px); /* Subtracting padding or margin if any */
+  }
 
 
-    .filter-buttons {
-        display: flex;
-        flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
-        gap: 10px; /* Maintains spacing between buttons */
-    }
+  .filter-buttons {
+      display: flex;
+      flex-wrap: wrap; /* Allows buttons to wrap onto the next line */
+      gap: 10px; /* Maintains spacing between buttons */
+  }
 
-    .filter-buttons .btn {
-        flex: 1 0 calc(50% - 10px); /* Allows buttons to take half the container width minus the gap */
-        margin-bottom: 10px; /* Adds a margin at the bottom for spacing between wrapped rows */
-    }
+  .filter-buttons .btn {
+      flex: 1 0 calc(50% - 10px); /* Allows buttons to take half the container width minus the gap */
+      margin-bottom: 10px; /* Adds a margin at the bottom for spacing between wrapped rows */
+  }
 }
+
+
+
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  background-color: gray;
+  font-size: 14px;
+  padding-bottom: 50px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* Media Queries */
+@media (min-width: 1025px) and (max-width: 5500px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 0px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 20px;
+    max-width: 70%;
+  }
+}
+
+
+
+
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .banner-section {
+    min-height: 30vh;
+    height: 30vh !important; /* Same as the height of the cards */
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}
+
 
 
 
