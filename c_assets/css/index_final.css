@@ -391,6 +391,11 @@ html {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.dtc-trust-tech .card-text {
+	color: navy;
+    font-weight: bold;
+}
+
 
 /*--------------------------------------------------------------
 # Important News
