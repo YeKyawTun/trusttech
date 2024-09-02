@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  padding-right: 10%; /* Adjusts padding to push content from the right */
+}
+
+.navbar-brand {
+  margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
+  color: #F8F8FF !important;
+}
+
+.navbar {
+  background-color: #161A30;
+}
+
+.navbar-nav .nav-link {
+  color: #F8F8FF !important; /* Pure white */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff !important; /* Bootstrap's default blue */
+}
+
+.banner-section {
+  color: white;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  background-image: url('../photos/BANNER_BOK_1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 70px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+.banner-text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 20px;
+  max-width: 50%;
+}
+
+.banner-text h1 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Dynamically adjusts font size */
+  overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
+}
+
+.banner-text p {
+  font-size: clamp(0.5rem, 1.5vw, 1.3rem);
+}
+
+.hero-container {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures that the text within the container is centered */
+  margin-top: 20px;
+}
+
+.hero-container h2 {
+  margin: 0; /* Removes default margin of the heading */
+}
+
+.grantcall-intro {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.grantcall {
+  flex: 1 0 auto;
+  margin-bottom: 20px;
+}
+
+.grantcall .container {
+  padding: 20px;
+}
+
+.grantcall .card {
+  height: 15rem;
+  margin-bottom: 20px; /* Add some margin between rows */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ensure text is visible against the background */
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grantcall .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific card background images */
+.card.research {
+  background-image: url('../photos/grantcalls/researchgrantcall.png');
+}
+
+.card.innovation {
+  background-image: url('../photos/grantcalls/innovationgrantcall.jpg');
+}
+
+.grantcall .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for text readability */
+  padding: 10px;
+  border-radius: 30px;
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  background-color: gray;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+/* Media Queries */
+@media (min-width: 1025px) and (max-width: 5500px) {
+  .banner-section {
+    height: 30vh; /* Same as the height of the cards */
+    margin-bottom: 0px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 20px;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .banner-section {
+    height: 30vh; /* Same as the height of the cards */
+    margin-bottom: 10px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-section {
+    height: 30vh; /* Same as the height of the cards */
+    margin-bottom: 10px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: 30vh; /* Same as the height of the banner section */
+  }
+
+  .banner-text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}

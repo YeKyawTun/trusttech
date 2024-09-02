@@ -7,38 +7,19 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/*body {
-  font-family: 'Rubik', sans-serif; */
-  /* display: flex; */
-  /*
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  margin-top: 50px;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
   flex: 1;
-  */
-
-  /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewport="0 0 20 20" fill="grey"><circle cx="1" cy="1" r="1"/></svg>');
-  background-size: 10px 10px; */
-/*}*/
-
-html {
-    scroll-behavior: smooth;
-  }
-  
-  html, body {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-  }
-    
-  body {
-      font-family: 'Rubik', sans-serif;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
 .container-fluid {
   padding-right: 10%; /* Adjusts padding to push content from the right */
@@ -46,11 +27,10 @@ html {
 
 .navbar-brand {
   margin-left: 10%; /* Pushes the navbar-brand 30% from the left side */
-  color: #F8F8FF !important; 
+  color: #F8F8FF !important;
 }
 
 .navbar {
-  /* background-color: transparent !important;*/
   background-color: #161A30;
 }
 
@@ -63,7 +43,6 @@ html {
 }
 
 .banner-section {
-  
   color: white;
   position: relative;
   width: 100%;
@@ -71,37 +50,26 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* to debug box-shadow: 0 4px 12px -2px rgba(214, 9, 9, 0.3); */    
   margin-bottom: 20px;
-
   background-image: url('../photos/BANNER_BOK_1.png');
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-top: 70px;
 }
 
-
-
 .banner-image {
   width: 100%;
-
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Cover the container while preserving aspect ratio */
   display: block; /* Remove any extra space below the image */
-
 }
-
-
-
 
 .banner-text {
   position: absolute;
   color: rgb(255, 255, 255);
   font-size: 20px;
   padding: 20px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   max-width: 50%;
 }
 
@@ -112,24 +80,21 @@ html {
   overflow-wrap: break-word; /* Ensures long words break to avoid overflow */
 }
 
-
 .banner-text p {
-  font-size: clamp(0.5rem, 1.5vw, 1.3rem);;
+  font-size: clamp(0.5rem, 1.5vw, 1.3rem);
 }
 
 .hero-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    text-align: center; /* Ensures that the text within the container is centered */
-    margin-top: 20px;
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Ensures that the text within the container is centered */
+  margin-top: 20px;
 }
 
 .hero-container h2 {
-    margin: 0; /* Removes default margin of the heading */
+  margin: 0; /* Removes default margin of the heading */
 }
-
-
 
 
 
@@ -139,7 +104,6 @@ html {
 
 .feature {
     padding: 20px;
-    background-color: #f8f7f5;
 }
 
 .feature .section-title h2 {
@@ -276,17 +240,6 @@ html {
     text-align: justify;
 }
 
-
-.trust-tech ul {
-    padding-left: 100px;
-}
-
-
-.trust-tech li {
-    padding-bottom: 15px;
-}
-
-
 .trust-tech .container .read-more-btn {
     background-color: navy; /* Changes the background color */
     color: white; /* Ensures text is visible against the dark background */
@@ -360,35 +313,6 @@ html {
 #imageContainer img {
     max-width: 80%; /* Limit the image width to 80% of the viewport */
     max-height: 80%; /* Limit the image height to 80% of the viewport */
-}
-
-
-
-
-/*--------------------------------------------------------------
-# DTC Trust Tech 
---------------------------------------------------------------*/
-.dtc-trust-tech {
-    /*margin-top: 50px;*/  /* Adjust this value to your preference */
-    padding: 20px; /* Adds padding for better text readability */
-    border-radius: 8px; /* Optional: adds rounded corners */
-    text-align: justify;
-}
-
-.dtc-trust-tech h2 {
-    text-align: center;
-}
-
-.dtc-trust-tech .card {
-    border-radius: 30px;
-    border-width: 3px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.dtc-trust-tech .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -698,73 +622,71 @@ html {
 
 /* Media Queries */
 @media (min-width: 1025px) and (max-width: 5500px) {
-
     .banner-section {
-        height: 50vh; /* Same as the height of the cards */
-        margin-bottom: 0px;
-        
+      height: 30vh; /* Same as the height of the cards */
+      margin-bottom: 0px;
     }
-    
+  
     .banner-image {
-        width: 100%;
-        height: 50vh; /* Same as the height of the banner section */
+      width: 100%;
+      height: 30vh; /* Same as the height of the banner section */
     }
-
+  
     .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 70%;
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      padding: 20px;
+      max-width: 70%;
     }
-
-
-}
-
-@media (min-width: 481px) and (max-width: 1024px) {
+  }
+  
+  
+  
+  
+  
+  @media (min-width: 481px) and (max-width: 1024px) {
     .banner-section {
-        height: 50vh; /* Same as the height of the cards */
-        margin-bottom: 10px;
-        
+      height: 30vh; /* Same as the height of the cards */
+      margin-bottom: 10px;
     }
-    
+  
     .banner-image {
-        width: 100%;
-        height: 50vh; /* Same as the height of the banner section */
+      width: 100%;
+      height: 30vh; /* Same as the height of the banner section */
     }
-
+  
     .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 15px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 80%;
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      padding: 20px;
+      max-width: 80%;
     }
-
-}
-
-
-@media (max-width: 480px) {
+  }
+  
+  
+  
+  
+  @media (max-width: 480px) {
     .banner-section {
-        height: 30vh; /* Same as the height of the cards */
-        margin-bottom: 10px;
-        
+      height: 30vh; /* Same as the height of the cards */
+      margin-bottom: 10px;
     }
-    
+  
     .banner-image {
-        width: 100%;
-        height: 30vh; /* Same as the height of the banner section */
+      width: 100%;
+      height: 30vh; /* Same as the height of the banner section */
     }
-
+  
     .banner-text {
-        position: absolute;
-        color: rgb(255, 255, 255);
-        font-size: 12px;
-        padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        max-width: 80%;
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      padding: 20px;
+      max-width: 80%;
     }
+  }
 
-}
+  
+  

@@ -139,7 +139,6 @@ html {
 
 .feature {
     padding: 20px;
-    background-color: #f8f7f5;
 }
 
 .feature .section-title h2 {
@@ -276,17 +275,6 @@ html {
     text-align: justify;
 }
 
-
-.trust-tech ul {
-    padding-left: 100px;
-}
-
-
-.trust-tech li {
-    padding-bottom: 15px;
-}
-
-
 .trust-tech .container .read-more-btn {
     background-color: navy; /* Changes the background color */
     color: white; /* Ensures text is visible against the dark background */
@@ -360,35 +348,6 @@ html {
 #imageContainer img {
     max-width: 80%; /* Limit the image width to 80% of the viewport */
     max-height: 80%; /* Limit the image height to 80% of the viewport */
-}
-
-
-
-
-/*--------------------------------------------------------------
-# DTC Trust Tech 
---------------------------------------------------------------*/
-.dtc-trust-tech {
-    /*margin-top: 50px;*/  /* Adjust this value to your preference */
-    padding: 20px; /* Adds padding for better text readability */
-    border-radius: 8px; /* Optional: adds rounded corners */
-    text-align: justify;
-}
-
-.dtc-trust-tech h2 {
-    text-align: center;
-}
-
-.dtc-trust-tech .card {
-    border-radius: 30px;
-    border-width: 3px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-}
-
-.dtc-trust-tech .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 
