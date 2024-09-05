@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- v1.9 
+    <meta http-equiv="Content-Security-Policy" 
+    content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    style-src 'self' https://cdn.jsdelivr.net;
+    img-src 'self' data:;
+    connect-src 'self';
+    frame-src 'none';
+    object-src 'none';
+    base-uri 'self';
+    "
+    > -->
+
+    
+
+
+    <title>News</title>
+
+    <link rel="preload" href="c_assets/photos/banner-image.jpg" as="image">
+
+    <!-- v1.9 - https://www.srihash.org/ - generate integrity from there -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" integrity="sha384-c9MVH4yRDZMY+bSlECVISp9U4xBl1dKb5z4x8IgF6lBKTHsh1AtxHBfHiiA+S/Nr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.27.1/dist/apexcharts.css" integrity="sha384-KKz9zieFddZpC3oGN6Zo6m75rSd/iO0VCeCcB5v4IM/dJvrDY4fN4FrE7O8YKqWa" crossorigin="anonymous">
+    
+    <link href="c_assets/css/local_news.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="index.html">Digital Directory</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Menu Items -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="trusttech.html">Trust Tech</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funding Opportunity
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="grantcall.html">Grant Calls</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Grant Call Awardee</a></li>
+                      </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="reference_library.html">Reference Library</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Digital Directory
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="browse_people.html">Browse</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="search_people.html">Search</a></li>
+                      </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Join us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/forum/" target="_blank" rel="noopener noreferrer">Forum</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        News
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="localnews.html">Local News</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Global News</a></li>
+                      </ul>
+                    </li>
+    
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactform.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+    
+
+  <!-- Banner Section -->
+  <div class="banner-section">
+    
+    <!-- <img src="c_assets/photos/Body_Of_Knowledge_Banner_2.jpg" class="banner-image"> -->
+            
+      <div class="banner-text">
+          <h1>Local News</h1>
+      </div>
+  </div>
+
+
+
+    <div class="container my-3 gray-background">
+        <div class="row" id="card-container">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+
+    <!-- Pagination Controls -->
+    <div class="container mt-4">
+        <nav aria-label="Page navigation">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Pagination buttons will be inserted here -->
+            </ul>
+        </nav>
+    </div>
+
+
+    
+
+    <!-- Overlay HTML -->
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 50;"></div>
+
+    <!-- Modal HTML (ensure it has a higher z-index than the overlay) -->
+    <div id="redirectModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 2px solid black; z-index: 100;">
+        <h2>Wait a moment</h2>
+        <p>We are taking you to the publishers website.</p>
+        <p id="countdown">5</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+        
+
+
+
+<script>
+        // Ensure everything is defined before calling loadCards
+        document.addEventListener("DOMContentLoaded", function() {
+            loadCards(1); // Load the first page with 9 cards initially
+            setupEventListeners(); // Setup event listeners
+        });
+
+        function loadCards(currentPage) {
+            const itemsPerPage = 9;
+            fetch('c_assets/data/local_newscard.json')  // Ensure this path is correct!
+                .then(response => response.json())
+                .then(data => {
+                    // Sort the data by date in descending order (latest date first)
+                    const sortedData = data.cards.sort((a, b) => {
+                        const dateA = new Date(a['card-text-date']);
+                        const dateB = new Date(b['card-text-date']);
+                        return dateB - dateA; // Sort in descending order
+                    });
+
+                    const numberOfPages = Math.ceil(sortedData.length / itemsPerPage);
+                    const startIndex = (currentPage - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+                    const itemsToShow = sortedData.slice(startIndex, endIndex);
+
+                    displayCards(itemsToShow);
+                    setupPagination(numberOfPages, currentPage);
+                })
+                .catch(error => console.error('Error loading the card data:', error));
+        }
+
+
+        function displayCards(cards) {
+            const container = document.getElementById('card-container');
+            container.innerHTML = ''; // Clear previous cards
+            cards.forEach(card => {
+                const cardHtml = `
+                    <div class="col-xl-4 col-lg-6 mb-4 card-top-padding">
+                        <div class="card h-100">
+                            <div class="card-body custom-card-body">
+
+                                <p class="card-newstag"><small class="text-muted">${card['newstag']}</small></p>
+
+                                <p class="card-text-title">
+                                    <a href="${card.url}" target="_blank">${card['card-text-title']}</a>
+                                </p>
+                                
+                                <p class="card-text-publisher"><small class="text-muted">By: ${card['card-text-publisher']}</small></p>
+                                <p class="card-text-date"><small class="text-muted">Published on: ${card['card-text-date']}</small></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+
+
+
+        function setupPagination(pages, current) {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';  // Clear previous buttons
+
+            const createPageItem = (page, text, isActive = false, isDisabled = false) => {
+                const li = document.createElement('li');
+                li.className = `page-item ${isDisabled ? 'disabled' : ''} ${isActive ? 'active' : ''}`;
+                li.innerHTML = `
+                    <a class="page-link" href="#" onclick="loadCards(${page}); return false;">${text}</a>
+                `;
+                return li;
+            };
+
+            // Previous Button
+            pagination.appendChild(createPageItem(current - 1, 'Previous page', false, current === 1));
+
+            // Page Numbers
+            for (let i = 1; i <= pages; i++) {
+                pagination.appendChild(createPageItem(i, i, current === i));
+            }
+
+            // Next Button
+            pagination.appendChild(createPageItem(current + 1, 'Next Page', false, current === pages));
+        }
+
+
+
+
+
+
+        function setupEventListeners() {
+            const container = document.getElementById('card-container');
+            container.addEventListener('click', function(event) {
+                event.preventDefault();
+                if (event.target.tagName === 'A' && (event.target.parentNode.classList.contains('card-text-title') || event.target.classList.contains('card-link'))) {
+                    const url = event.target.href;
+                    openModal(url);
+                }
+            });
+        }
+
+        var openUrlInterval; // Define a global variable to hold the interval ID
+
+        function openModal(url) {
+            const overlay = document.getElementById('overlay');
+            const modal = document.getElementById('redirectModal');
+            overlay.style.display = 'block';
+            modal.style.display = 'block';
+            let countdown = 5;
+            const countdownElement = document.getElementById('countdown');
+            countdownElement.textContent = countdown;
+
+            openUrlInterval = setInterval(() => { // Assign interval to a variable
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(openUrlInterval);
+                    window.open(url, '_blank');
+                    closeModal();
+                }
+            }, 1000);
+        }
+
+        function closeModal() {
+            const overlay = document.getElementById('overlay');
+            const modal = document.getElementById('redirectModal');
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+            clearInterval(openUrlInterval); // Clear the interval when modal is closed
+        }
+
+</script>
+
+
+
+
+
+</body>
+</html>
