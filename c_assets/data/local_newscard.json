@@ -1,0 +1,74 @@
+{
+    "cards": [
+        {
+            "newstag": "EDUCATION",
+            "card-text-title": "Mastercard and NTU Singapore Launch Masters Program to Boost Cyber Talent",
+            "url": "https://www.ntu.edu.sg/news/detail/boosting-cyber-talent-with-a-new-masters-programme-with-mastercard",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "23-Nov-2023"
+        },
+        {
+            "newstag": "WORKSHOPS",
+            "card-text-title": "DTC Executive Director Delivers the Welcoming Remarks at the Digital Forensics Research Workshops 2023 in Singapore International Cyber Week (SICW)",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/dtc-executive-director-delivers-the-welcoming-remarks-at-the-digital-forensics-research-workshops-2023-in-singapore-international-cyber-week-(sicw)",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "09-Jan-2024"
+        },
+        {
+            "newstag": "COLLABORATION",
+            "card-text-title": "Growing the regional cybersecurity ecosystem with Mastercard",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/growing-the-regional-cybersecurity-ecosystem-with-mastercard",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "07-Dec-2022"
+        },
+        {
+            "newstag": "VISITS",
+            "card-text-title": "Netherlands Embassy visit to NTU",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/netherlands-embassy-visit-to-ntu",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "20-Apr-2023"
+        },
+        {
+            "newstag": "VISITS",
+            "card-text-title": "INTERPOL and Netherlands Police Delegation visit to DTC",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/interpol-and-netherlands-police-delegation-visit-to-ncdt",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "26-Apr-2023"
+        },
+        {
+            "newstag": "VISITS",
+            "card-text-title": "DTC Executive Director’s Visit to Centrum Wiskunde & Informatica (CWI) in the Netherlands",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/dtc-executive-director-s-visit-to-centrum-wiskunde-informatica-(cwi)-in-the-netherlands",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "04-Jul-2023"
+        },
+        {
+            "newstag": "VISITS",
+            "card-text-title": "DTC Executive Director at the First Summit of Centers for Digital Trust in Switzerland",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/dtc-executive-director-at-the-first-summit-of-centers-for-digital-trust-in-switzerland",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "21-Nov-2023"
+        },
+        {
+            "newstag": "EDUCATION",
+            "card-text-title": "Boosting cyber talent with a new Masters programme with Mastercard",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/boosting-cyber-talent-with-a-new-masters-programme-with-mastercard",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "23-Nov-2023"
+        },
+        {
+            "newstag": "AI SAFETY INSTITUTE",
+            "card-text-title": "Digital Trust Center designated as Singapore's AI Safety Institute",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/digital-trust-center-designated-as-singapore's-ai-safety-institute",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "22-May-2024"
+        },
+        {
+            "newstag": "AI SAFETY",
+            "card-text-title": "AI safety, inclusivity and innovation must progress in tandem: PM Wong",
+            "url": "https://www.ntu.edu.sg/dtc/news-events/news/detail/ai-safety-inclusivity-and-innovation-must-progress-in-tandem-pm-wong",
+            "card-text-publisher": "Digital Trust Centre Singapore",
+            "card-text-date": "2-May-2024"
+        }        
+    ]
+}
