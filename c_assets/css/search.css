@@ -166,6 +166,39 @@ html {
   }
     
   
+
+
+
+/*--------------------------------------------------------------
+# Pagination 
+--------------------------------------------------------------*/
+.pagination .page-link {
+  color: black; /* Default color */
+  /* padding: 10px 20px;*/
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+
+.pagination .page-link:hover {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: navy; /* Set the active color to navy */
+  color: white;
+  border-color: navy; /* Optional: border color can also be navy */
+}
+
+.pagination .page-item.disabled .page-link {
+  color: gray;
+  cursor: not-allowed;
+  background-color: #f1f1f1;
+}
+
+
+
+
   /*--------------------------------------------------------------
   # Global Footer
   --------------------------------------------------------------*/
@@ -197,6 +230,7 @@ html {
     }
     
   
+    
     
   
   
